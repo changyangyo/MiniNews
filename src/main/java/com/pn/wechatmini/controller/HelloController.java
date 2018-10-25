@@ -22,6 +22,7 @@ public class HelloController {
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String getHello() {
+        int a = 1 / 0;
         List<Logweblogin> logweblogins = logWebLoginDAO.queryLogWebLogins();
         System.out.println(logweblogins.size());
         return "hello Spring Boot !";
